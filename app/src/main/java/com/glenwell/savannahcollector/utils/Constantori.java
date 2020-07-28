@@ -107,7 +107,7 @@ public class Constantori {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    public static final String URL_GEN = "http://mobiledata.rcmrd.org/rlc/rlc_gen.php";
+    public static final String URL_GEN = "http://savannah.glenwell.com/savannah/savannah_gen.php";
 
 
     /////////////////////////////////////////////////////////////////////////////

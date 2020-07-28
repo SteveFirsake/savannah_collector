@@ -292,7 +292,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                             JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_RL, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
 
                             if (Constantori.isConnectedToInternet()) {
-                                new NetPost(context, "maindataRL_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_RL, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+                                new NetPost(context, "maindataRangelands_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_RL, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
+                            }
+
+                        }else{
+                            hexa++;
+                        }
+
+                        if (db.getRowCount(Constantori.TABLE_DAT_DEG,Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS) > 0) {
+
+                            JSONArray sendo = db.PostDataArray_Alldata(Constantori.TABLE_DAT_DEG, Constantori.KEY_DATSTATUS, Constantori.SAVE_DATSTATUS);
+
+                            if (Constantori.isConnectedToInternet()) {
+                                new NetPost(context, "maindataDegradation_PostJSON", sendo, "Sending... Make sure internet connection is active", Constantori.TABLE_DAT_DEG, Constantori.KEY_DATSTATUS, MainActivity.this).execute(new String[]{Constantori.URL_GEN});
                             }
 
                         }else{
@@ -773,7 +785,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void AsyncTaskCompleteListener(String result, String sender, String TableName, String FieldName)
     {
         switch (sender){
-            case "maindataRL_PostJSON":
+            case "maindataRangelands_PostJSON":
 
                 if(result.equals(null)) {
                     Toast.makeText(context, Constantori.ERROR_SERVER_ISSUE, Toast.LENGTH_LONG).show();
@@ -789,7 +801,31 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         Constantori.diambaidsent(View, context);
 
                     }catch (Exception xx){
-                        Log.e(Constantori.APP_ERROR_PREFIX + "_LoginnoJSON", xx.getMessage());
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_RLJSON", xx.getMessage());
+                        xx.printStackTrace();
+                    }
+
+                }
+
+                break;
+
+            case "maindataDegradation_PostJSON":
+
+                if(result.equals(null)) {
+                    Toast.makeText(context, Constantori.ERROR_SERVER_ISSUE, Toast.LENGTH_LONG).show();
+                }else if(result.equals("Issue")) {
+                    Constantori.diambaidno(View, context);
+                }else{
+
+                    try {
+                        JSONArray storesArray = new JSONArray(result);
+
+                        db.DataPost_Status(storesArray, Constantori.TABLE_DAT_DEG);
+
+                        Constantori.diambaidsent(View, context);
+
+                    }catch (Exception xx){
+                        Log.e(Constantori.APP_ERROR_PREFIX + "_DegJSON", xx.getMessage());
                         xx.printStackTrace();
                     }
 
@@ -822,8 +858,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 break;
 
             case "maindata_PostImages":
-
-
 
                 if(result.equals(null)) {
                     Toast.makeText(context, "Server updating, please wait and try again", Toast.LENGTH_LONG).show();
