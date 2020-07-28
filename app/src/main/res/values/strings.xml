@@ -1,0 +1,59 @@
+<resources>
+
+    <string name="app_name">Savannah Collector</string>
+    <string name="support">About App</string>
+    <string name="s8a">Specify</string>
+    <string name="bfoop">Take Picture</string>
+    <string name="maneno">English</string>
+
+    <string name="but1">Collect Data</string>
+    <string name="but2">Send Bulk Data</string>
+    <string name="but3">View Data</string>
+    <string name="locstat">Scanning Location :</string>
+
+    <string name="err_msg_name">Please enter your full name</string>
+    <string name="err_msg_email">Please enter a valid email address</string>
+    <string name="err_msg_phone">Please enter a valid phone number</string>
+    <string name="err_msg_org">Please enter your organisation name</string>
+    <string name="err_msg_role">Please enter your role/position/department</string>
+    <string name="err_msg_password">Please enter a password</string>
+    <string name="err_msg_password2">Please make sure the passowrd match</string>
+
+    <string name="reggo">Register</string>
+    <string name="fulnem">Username</string>
+    <string name="fono">Phone Number</string>
+    <string name="fonoo">07********</string>
+    <string name="emailad">E-mail Address</string>
+    <string name="countrii">Country: </string>
+    <string name="regista">Register</string>
+
+    <string name="rback">Back</string>
+    <string name="snt">Data Sent Successfully</string>
+    <string name="pwad">Password</string>
+    <string name="enda">OK</string>
+    <string name="pwada">use assigned password</string>
+
+    <string name="badnet">Please ensure your Internet connection is active.</string>
+    <string name="notreg">Please register first for better services</string>
+    <string name="mbaindi2">You have successfully registered</string>
+
+    <string name="stst">Savannah Collector is a subset of JiMapp System. JiMapp is a customizable spatial data collection android app that facilitates the simple collection of georeferenced information. \n It comes along with a fully equipped web display application. \n For more information about this system please call +254717534281.</string>
+
+    <string name="t1">Data Collection</string>
+
+    <string-array name="watertype">
+        <item>	SELECT	</item>
+        <item>Dam</item>
+        <item>Water Pan</item>
+        <item>River</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="savo">Save</string>
+    <string name="savv">Data has been successfully saved. Remember to post all data by clicking on "Send Bulk Data".</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="ty">Permanent</string>
+    <string name="tn">Seasonal</string>
+    <string name="t16">Location Description</string>
+
+</resources>

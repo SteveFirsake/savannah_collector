@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#FFBF00</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorAccent">#FFEB3B</color>
+
+
+    <!--<color name="colorThm">#cc8C6954</color>-->
+    <color name="colorMainTitle">#FFFFFF</color>
+    <color name="colorWhiteText">#FFFFFF</color>
+    <color name="colorThemeTitle">#000000</color>
+    <color name="colorDark">#000000</color>
+    <color name="colorDarkTranslucent">#DD000000</color>
+    <color name="colorMainTxtswitch">#FFFFFF</color>
+    <color name="genLabels">#ffbf00</color>
+    <color name="colorComlinee">#ccffbf00</color>
+    <color name="colorComlineeMain">#ccffbf00</color>
+    <color name="colorslide">#ccffbf00</color>
+    <color name="colorHighlight">#dd000000</color>
+    <color name="colorHtransparent">#22ffbf00</color>
+    <color name="statocom">#ffbf00</color>
+    <color name="dialogcom">#ffffff</color>
+    <color name="dialogcombtn">#ffbf00</color>
+    <color name="dialogcomtxt">#000000</color>
+    <color name="design_textinput_error_color_light">#FF0000</color>
+
+
+</resources>

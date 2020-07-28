@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dodok_0"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgga"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/savannahicon" />
+
+                <TextView
+                    android:id="@+id/ttl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgga"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:text="User Login"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textILemail"
+                    android:layout_width="match_parent"
+                    android:theme="@style/TextLabel"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/logemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines = "1"
+                        android:textColor="@color/colorMainTitle"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email Address"
+                        android:ems="10"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textILpass"
+                    android:theme="@style/TextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/textILemail"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/logpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorMainTitle"
+                        android:maxLines = "1"
+                        android:inputType="textPassword"
+                        android:hint="Password"
+                        android:ems="10"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/logingia"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/comlineemain"
+                    android:text="Sign in"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/logreg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logingia"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick_su"
+                    android:text="Register"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/logforgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logreg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:onClick="onClick_fd"
+                    android:text="Forgot log in details?"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
