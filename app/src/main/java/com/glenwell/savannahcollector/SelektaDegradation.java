@@ -166,7 +166,7 @@ public class SelektaDegradation extends AppCompatActivity {
 
 			public void onClick(View view) {
 			if (!classtype.equals("")) {
-				Intent intent = new Intent(SelektaDegradation.this, CollectaRangelands.class);
+				Intent intent = new Intent(SelektaDegradation.this, CollectaDegradation.class);
 				intent.putExtra("lattt", say);
 				intent.putExtra("lonnn", sax);
 				intent.putExtra("datno", datno);

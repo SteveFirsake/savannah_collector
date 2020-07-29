@@ -385,7 +385,6 @@ public class Regista extends AppCompatActivity implements AsyncTaskCompleteListe
 						ssusapaso = usapaso.getText().toString().trim();
 
 
-
 						map.put(Constantori.KEY_USERACTIVE, Constantori.USERACTIVE);
 						map.put(Constantori.KEY_USERNEM, ssusanem);
 						map.put(Constantori.KEY_USERTEL, ssusafon);
@@ -544,6 +543,7 @@ public class Regista extends AppCompatActivity implements AsyncTaskCompleteListe
 					Intent intent = new Intent(context, MainActivity.class);
 					startActivity(intent);
 				}else{
+
 					Intent intent = new Intent(context, Loginno.class);
 					startActivity(intent);
 				}

@@ -545,7 +545,7 @@ public class Loginno extends AppCompatActivity implements AsyncTaskCompleteListe
         if(Constantori.isExternalStorageWritable()) {
 
             File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
-                    File.separator + "Tatua");
+                    File.separator + Constantori.PIC_PATH);
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();

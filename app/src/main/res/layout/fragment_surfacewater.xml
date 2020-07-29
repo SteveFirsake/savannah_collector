@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:text="Surface Water"
+        android:text="Water Body"
         android:textColor="@color/colorThemeTitle"
         android:textStyle="bold"
         android:textSize="17sp" />

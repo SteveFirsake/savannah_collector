@@ -71,7 +71,7 @@ public class CollectaDegradation extends AppCompatActivity {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_rangelands);
+        setContentView(R.layout.fragment_degradation);
         overridePendingTransition(0,0);
 
 		if (Build.VERSION.SDK_INT < 23) {
@@ -190,10 +190,10 @@ public class CollectaDegradation extends AppCompatActivity {
 				submap.put(Constantori.KEY_DATSTATUS,Constantori.SAVE_DATSTATUS);
 				submap.put(Constantori.KEY_USERREF, refo);
 
-				if (db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_RL, Constantori.KEY_DATNO, datno)){
-					db.KolekData_UpdateAll_RL(Constantori.getJSON(submap));
+				if (db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_DEG, Constantori.KEY_DATNO, datno)){
+					db.KolekData_UpdateAll_DEG(Constantori.getJSON(submap));
 				}else{
-					db.KolekData_InsertAll_RL(Constantori.getJSON(submap));
+					db.KolekData_InsertAll_DEG(Constantori.getJSON(submap));
 				}
 
 				Map<String,String> submap2 = new HashMap<String, String>();
@@ -308,7 +308,7 @@ public class CollectaDegradation extends AppCompatActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+		super.onActivityResult(requestCode, resultCode, data);
 		 if (requestCode==PICTURE_STUFF && resultCode == RESULT_OK){
 
 
@@ -541,12 +541,12 @@ public class CollectaDegradation extends AppCompatActivity {
 
 			case "Entered":
 
-				if (db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_RL, Constantori.KEY_DATNO, datno) && db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_RL, Constantori.KEY_USERREF, refo)) {
+				if (db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_DEG, Constantori.KEY_DATNO, datno) && db.CheckIsDataAlreadyInDBorNot(Constantori.TABLE_DAT_DEG, Constantori.KEY_USERREF, refo)) {
 
-					List<HashMap<String, String>> allData = db.GetAllData(Constantori.TABLE_DAT_RL, Constantori.KEY_DATNO, datno);
+					List<HashMap<String, String>> allData = db.GetAllData(Constantori.TABLE_DAT_DEG, Constantori.KEY_DATNO, datno);
 					HashMap<String, String> allDetails = allData.get(0);
-					txtCover.setText(allDetails.get(Constantori.KEY_DATFEATURE_RL));
-					edtComment.setText(allDetails.get(Constantori.KEY_DATCOMMENT_RL));
+					txtCover.setText(allDetails.get(Constantori.KEY_DATFEATURE_DEG));
+					edtComment.setText(allDetails.get(Constantori.KEY_DATCOMMENT_DEG));
 				}else{
 
 					txtCover.setText(sSpecify);

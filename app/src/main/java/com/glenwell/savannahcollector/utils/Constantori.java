@@ -38,7 +38,7 @@ public class Constantori {
     //DATABASE//////////////////////////////////////////////////////////////
 
     public static final String APP_ERROR_PREFIX = "SC";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 5;
     public static final String DATABASE_NAME = "SCDB";
     public static  final Context DATABASE_Context = ApplicationContextor.getAppContext();
 
@@ -107,7 +107,7 @@ public class Constantori {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    public static final String URL_GEN = "http://savannah.glenwell.com/savannah/savannah_gen.php";
+    public static final String URL_GEN = "http://savannah.glenwell.com/savannah_gen.php";
 
 
     /////////////////////////////////////////////////////////////////////////////
@@ -120,7 +120,7 @@ public class Constantori {
     public final static int REQUEST_CODE_RECOVER_PLAY_SERVICES = 200;
     public final static int REQUEST_LOCATION = 2;
     public final static int REQUEST_CHECK_SETTINGS = 12;
-    public static final String PIC_PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/SC";
+    public static final String PIC_PATH = "/IMG_SC";
 
 
     public static JSONArray getJSON(Map<String, String> x){

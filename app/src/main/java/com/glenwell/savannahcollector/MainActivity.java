@@ -141,7 +141,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             diambaidweni(View);
         }
 
-
         textSwitcher.setFactory(new ViewFactory(){
 
             @Override
@@ -611,6 +610,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == Constantori.REQUEST_CODE_RECOVER_PLAY_SERVICES) {
             if (resultCode == RESULT_OK) {
                 // Make sure the app is not already connected or attempting to connect

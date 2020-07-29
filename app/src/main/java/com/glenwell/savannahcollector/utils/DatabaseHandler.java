@@ -56,7 +56,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_PIC_TABLE);
 
 
-        String CREATE_KOLEKDAT_TABLE_VEG = "CREATE TABLE " + Constantori.TABLE_DAT_RL + "("
+        String CREATE_KOLEKDAT_TABLE_RL = "CREATE TABLE " + Constantori.TABLE_DAT_RL + "("
                 + Constantori.KEY_RID_RL + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + Constantori.KEY_DATNO + " VARCHAR,"
                 + Constantori.KEY_DATFEATURE_RL + " VARCHAR,"
@@ -67,7 +67,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + Constantori.KEY_DATSTATUS + " VARCHAR,"
                 + Constantori.KEY_USERREF + " VARCHAR"
                 + ")";
-        db.execSQL(CREATE_KOLEKDAT_TABLE_VEG);
+        db.execSQL(CREATE_KOLEKDAT_TABLE_RL);
 
 
         String CREATE_KOLEKDAT_TABLE_DEG = "CREATE TABLE " + Constantori.TABLE_DAT_DEG + "("
@@ -210,7 +210,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 values.put(Constantori.KEY_USERREF, store.getString(Constantori.KEY_USERREF));
 
 
-                db.insert(Constantori.TABLE_DAT_WAT, null, values);
+                db.insert(Constantori.TABLE_DAT_RL, null, values);
 
             }
 
