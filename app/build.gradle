@@ -3,16 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         savannahRelease {
-            keyAlias 'igotthaMINE'
-            keyPassword '53#falls'
-            storeFile file('/home/steve/all_vak/tieneAS/Funguo/igotthaMINE.jks')
-            storePassword '53#falls'
+            
         }
         savannahDebug {
-            keyAlias 'igotthaMINE'
-            keyPassword '53#falls'
-            storeFile file('/home/steve/all_vak/tieneAS/Funguo/igotthaMINE.jks')
-            storePassword '53#falls'
+            
         }
     }
     compileSdkVersion 29
